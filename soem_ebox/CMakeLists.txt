@@ -30,11 +30,11 @@ find_package(OROCOS-RTT REQUIRED ${RTT_HINTS})
 # documentation.
 include(${OROCOS-RTT_USE_FILE_PATH}/UseOROCOS-RTT.cmake)
 
-#uncomment if you have defined messages
-rosbuild_genmsg()
-
-rosbuild_include(rtt_rosnode GenerateRTTtypekit)
-ros_generate_rtt_typekit(soem_ebox)
+if (ROS_ROOT)
+	rosbuild_genmsg()
+	rosbuild_include(rtt_rosnode GenerateRTTtypekit)
+	ros_generate_rtt_typekit(soem_ebox)
+endif()
 
 #
 # Components, types and plugins.

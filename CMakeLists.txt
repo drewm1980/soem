@@ -6,3 +6,4 @@ endif(COMMAND cmake_policy)
 
 add_subdirectory(soem_core)
 add_subdirectory(soem_master)
+add_subdirectory(soem_ebox)
