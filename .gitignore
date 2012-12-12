@@ -4,3 +4,4 @@ bin
 *.cmake
 cmake_stack.mk
 lib
+Makefile
