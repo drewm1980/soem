@@ -36,6 +36,7 @@ include(${OROCOS-RTT_USE_FILE_PATH}/UseOROCOS-RTT.cmake)
 orocos_library(soem_driver_factory soem_driver_factory.cpp)
 orocos_component(soem_master  soem_master_component.cpp)
 target_link_libraries(soem_master soem_driver_factory)
+target_link_libraries(soem_master soem_core)
 
 orocos_plugin(soem_plugin soem_plugin.cpp)
 
