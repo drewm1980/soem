@@ -1,0 +1,14 @@
+Andrew Wagner Dec. 12, 2012
+
+Until this version it was necessary to manually download the soem tarball from sourceforge, i.e. SOEM1.2.5.tar.bz2, extract it, and move the "src" directory to this location.  Instead of forcing the user to perform this (previously undocumented) step, the soem sources are now included.
+
+If you need to upgrade soem for some reason, replace the contents of "src" with the new version, and manually apply the meaningful changes in soem.patch:
+
+-       ifr.ifr_flags = ifr.ifr_flags || IFF_PROMISC || IFF_BROADCAST;
+-       r = ioctl(*psock, SIOCGIFFLAGS, &ifr);
++       ifr.ifr_flags = ifr.ifr_flags | IFF_PROMISC | IFF_BROADCAST;
++       r = ioctl(*psock, SIOCSIFFLAGS, &ifr);
+
+-       fl = fcntl(*psock, F_GETFL, 0);
++       //fl = fcntl(*psock, F_GETFL, 0);
+
