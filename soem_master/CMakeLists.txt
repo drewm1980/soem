@@ -9,6 +9,11 @@ project(soem_master)
 #  MinSizeRel     : w/o debug symbols, w/ optimization, stripped binaries
 #set(ROS_BUILD_TYPE RelWithDebInfo)
 
+#set the default path for built executables to the "bin" directory
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
+#set the default path for built libraries to the "lib" directory
+set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
+
 # Do setup in case of ros package, If ROS_ROOT is set, it is                                                                                                 # recommended to use RTT/OCL through the ros packages.                                                                                                       
 set (ROS_ROOT $ENV{ROS_ROOT} )
 if (ROS_ROOT)
@@ -20,6 +25,8 @@ endif()
 # Set the CMAKE_PREFIX_PATH in case you're not using Orocos through
 # ROS for helping these find commands find RTT.
 find_package(OROCOS-RTT REQUIRED ${RTT_HINTS} )
+
+include_directories(../soem_core/src/)
 
 # Defines the orocos_* cmake macros. See that file for additional
 # documentation.
