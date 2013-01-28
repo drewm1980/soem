@@ -36,6 +36,9 @@ if (ROS_ROOT)
 	ros_generate_rtt_typekit(soem_ebox)
 endif()
 
+include_directories(..)
+include_directories(../soem_core/src/)
+
 #
 # Components, types and plugins.
 #
