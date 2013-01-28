@@ -31,10 +31,10 @@
 #include <rtt/Port.hpp>
 #include <bitset>
 
-#include <soem_ebox/EBOXOut.h>
-#include <soem_ebox/EBOXAnalog.h>
-#include <soem_ebox/EBOXDigital.h>
-#include <soem_ebox/EBOXPWM.h>
+#include <EBOXOut.h>
+#include <EBOXAnalog.h>
+#include <EBOXDigital.h>
+#include <EBOXPWM.h>
 
 using namespace RTT;
 

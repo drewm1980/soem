@@ -39,6 +39,10 @@ endif()
 include_directories(..)
 include_directories(../soem_core/src/)
 
+include_directories(msg)
+#include_directories(msg_gen/types)
+#include_directories(msg_gen/types/soem_ebox/msg)
+
 #
 # Components, types and plugins.
 #
