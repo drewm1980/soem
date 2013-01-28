@@ -1,1 +1,1 @@
-typegen -o types soem_ebox_types msg/*.h
+typegen -o msg_gen soem_ebox msg/*.h
